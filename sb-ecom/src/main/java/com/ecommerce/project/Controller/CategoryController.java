@@ -16,12 +16,12 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    @GetMapping("api/public/categories")
+    @GetMapping("/api/public/categories")
     public List<Category> getAllCategories() {
         return categoryService.getAllCategories();
     }
 
-    @PostMapping("api/public/categories")
+    @PostMapping("/api/public/categories")
     public String createCategory(@RequestBody Category category) {
         categoryService.createCategory(category);
         return "Category added successfully";
