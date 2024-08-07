@@ -1,12 +1,12 @@
-package com.ecommerce.project.model;
+package com.ecommerce.project.Model;
 
 public class Category {
     private Long categoryId;
     private String categoryName;
 
-    public Category(Long categoryid, String categoryname) {
-        this.categoryId = categoryid;
-        this.categoryName = categoryname;
+    public Category(Long categoryId, String categoryName) {
+        this.categoryId = categoryId;
+        this.categoryName = categoryName;
     }
 
     public Long getCategoryId() {
