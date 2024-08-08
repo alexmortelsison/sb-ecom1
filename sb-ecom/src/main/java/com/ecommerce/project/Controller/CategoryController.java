@@ -14,15 +14,15 @@ import java.util.List;
 public class CategoryController {
 
     @Autowired
-    CategoryService categoryService;
+    private CategoryService categoryService;
 
     @GetMapping("/api/public/categories")
-    public List<Category> getCategories() {
+    public List<Category> getAllCategories() {
         return categoryService.getAllCategories();
     }
 
     @PostMapping("/api/public/categories")
-    public String addCategory(@RequestBody Category category) {
+    public String createCategory(@RequestBody Category category) {
         categoryService.createCategory(category);
         return "Category added successfully";
     }

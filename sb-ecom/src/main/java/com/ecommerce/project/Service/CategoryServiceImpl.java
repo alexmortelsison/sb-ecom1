@@ -8,6 +8,7 @@ import java.util.List;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
+
     List<Category> categories = new ArrayList<>();
 
     @Override
