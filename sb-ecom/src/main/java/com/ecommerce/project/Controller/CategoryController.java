@@ -21,9 +21,10 @@ public class CategoryController {
         return categoryService.getAllCategories();
     }
 
-    @PostMapping("/api/public/categories")
-    public String createCategory(@RequestBody Category category) {
-        categoryService.createCategory(category);
-        return "Category added successfully";
+    @PostMapping("api/public/categories")
+        public String createCategory(@RequestBody Category category) {
+            categoryService.createCategory(category);
+            return "Category added successfully";
+        }
     }
-}
+
