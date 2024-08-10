@@ -4,8 +4,8 @@ public class Category {
     private Long categoryId;
     private String categoryName;
 
-    public Category(Long id, String categoryName) {
-        this.categoryId = id;
+    public Category(Long categoryId, String categoryName) {
+        this.categoryId = categoryId;
         this.categoryName = categoryName;
     }
 
