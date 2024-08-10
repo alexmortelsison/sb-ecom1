@@ -12,7 +12,6 @@ public class CategoryServiceImpl implements CategoryService {
     private List<Category> categories = new ArrayList<>();
     private Long nextId = 1L;
 
-
     @Override
     public List<Category> getAllCategories() {
         return categories;
@@ -30,7 +29,7 @@ public class CategoryServiceImpl implements CategoryService {
                 .filter(c -> c.getCategoryId().equals(categoryId))
                 .findFirst().orElse(null);
         if (category == null)
-            return "Category not found";
+            return "Category not found.";
         categories.remove(category);
         return "Category with categoryId " + categoryId + " deleted successfully";
     }

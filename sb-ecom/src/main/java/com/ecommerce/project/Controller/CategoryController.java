@@ -11,7 +11,7 @@ import java.util.List;
 public class CategoryController {
 
     @Autowired
-    private CategoryService categoryService;
+    CategoryService categoryService;
 
     @GetMapping("/api/public/categories")
     public List<Category> getAllCategories() {
@@ -26,7 +26,7 @@ public class CategoryController {
 
     @DeleteMapping("/api/admin/categories/{categoryId}")
     public String deleteCategory(@PathVariable Long categoryId) {
-        String status = categoryService.deleteCategory(categoryId);
-        return  status;
+       String status = categoryService.deleteCategory(categoryId);
+       return status;
     }
 }
