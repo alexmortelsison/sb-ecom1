@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CategoryServiceImpl implements CategoryService{
+public class CategoryServiceImpl implements CategoryService {
 
-    private final List<Category> categories = new ArrayList<>();
+    private List<Category> categories = new ArrayList<>();
     private Long nextId = 1L;
+
 
     @Override
     public List<Category> getAllCategories() {
@@ -30,8 +31,7 @@ public class CategoryServiceImpl implements CategoryService{
                 .findFirst().orElse(null);
         if (category == null)
             return "Category not found";
-
         categories.remove(category);
-        return "Category with categoryId: " + categoryId + " deleted successfully!";
+        return "Category with categoryId " + categoryId + " deleted successfully";
     }
 }
