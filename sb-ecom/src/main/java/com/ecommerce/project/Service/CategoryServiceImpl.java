@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CategoryServiceImpl implements CategoryService{
+public class CategoryServiceImpl implements CategoryService {
 
     private List<Category> categories = new ArrayList<>();
     private Long nextId = 1L;
+
 
     @Override
     public List<Category> getAllCategories() {
