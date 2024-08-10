@@ -11,11 +11,11 @@ import java.util.List;
 public class CategoryController {
 
     @Autowired
-    CategoryService categoryService;
+    private CategoryService categoryService;
 
     @GetMapping("/api/public/categories")
     public List<Category> getAllCategories() {
-        return categoryService.getAllCategories();
+       return categoryService.getAllCategories();
     }
 
     @PostMapping("/api/public/categories")
@@ -24,9 +24,9 @@ public class CategoryController {
         return "Category added successfully";
     }
 
-    @DeleteMapping("/api/admin/categories/{categoryId}")
+    @DeleteMapping("api/admin/categories/{categoryId}")
     public String deleteCategory(@PathVariable Long categoryId) {
-       String status = categoryService.deleteCategory(categoryId);
-       return status;
+        String status = categoryService.deleteCategory(categoryId);
+        return status;
     }
 }
